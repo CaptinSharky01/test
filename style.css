@@ -1,0 +1,104 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f0f13;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #e8e8f0;
+}
+
+.container {
+  text-align: center;
+  max-width: 640px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #7c6af5;
+}
+
+.card {
+  background: #1a1a24;
+  border: 1px solid #2e2e42;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: border-color 0.3s;
+}
+
+.card.flash {
+  border-color: #7c6af5;
+}
+
+.quote {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #d8d8ec;
+}
+
+.author {
+  font-size: 0.9rem;
+  color: #7c6af5;
+  font-style: italic;
+}
+
+.author:not(:empty)::before {
+  content: '— ';
+}
+
+button {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+#btn {
+  background: #7c6af5;
+  color: #fff;
+}
+
+#btn:hover {
+  opacity: 0.85;
+}
+
+#copy-btn {
+  background: #1a1a24;
+  border: 1px solid #2e2e42;
+  color: #9898b8;
+}
+
+#copy-btn:hover {
+  border-color: #7c6af5;
+  color: #e8e8f0;
+}
+
+#copy-btn.copied {
+  color: #5ed88a;
+  border-color: #5ed88a;
+}
