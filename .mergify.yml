@@ -1,2 +1,5 @@
-queue_rules:
-  - name: 1<h1>a</h1>
+pull_request_rules:
+  - name: New rule
+    conditions:
+      - base = main
+    actions: {}
